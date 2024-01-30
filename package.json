@@ -1,5 +1,5 @@
 {
-  "name": "mock-service",
+  "name": "@liuhanfei/mock-service",
   "version": "1.0.0",
   "description": "mock 服务",
   "main": "dist/index.js",

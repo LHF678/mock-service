@@ -6,7 +6,7 @@
 
 ## 安装
 ```
-$ npm install mock-server --save-dev
+$ npm install @liuhanfei/mock-server --save-dev
 ```
 
 ## 使用
@@ -32,7 +32,7 @@ confg <br>
 ```
 // vue.config.js
 
-const mock = require('mock-server');
+const mock = require('@liuhanfei/mock-server');
 
 // 针对 vue-cli&webpack 的不同版本
 module.exports = {
