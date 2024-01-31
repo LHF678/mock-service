@@ -24,7 +24,7 @@ $ npm install @liuhanfei/mock-server --save-dev
 confg <br>
 | 参数名 | 说明 | 类型 | 默认值 |
 |-|-|-|-|
-| timeout | 延迟响应时间，必须传入数值或者一个数值范围，范围以 - 分割 例```800-1000``` | number\|string  | - |
+| timeout | 延迟响应时间，必须传入数值或者一个数值范围，范围以 - 分割 例```800-1000``` | number string  | - |
 | folderName | 指定 mock 文件夹名称 | string  | mock |
 
 
