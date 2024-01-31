@@ -1,4 +1,4 @@
-# mock 服务
+# mock 服务模拟后端接口响应
 
 ## 支持
 - 完全支持 mockjs 语法
@@ -10,9 +10,7 @@ $ npm install @liuhanfei/mock-service -D
 $ yarn add @liuhanfei/mock-service -D
 ```
 
-## 使用
-
-### 方法参数说明
+## 方法参数说明
 
 #### start 启动 mock 服务
 
@@ -28,6 +26,27 @@ $ yarn add @liuhanfei/mock-service -D
 | timeout | 延迟响应时间，必须传入数值或者一个数值范围，范围以 - 分割 例```800-1000``` | number string  | - |
 | folderName | 指定 mock 文件夹名称 | string  | mock |
 
+## 使用
+
+> 1、请在项目根目录下新建 mock 文件目录 <br>
+2、请以 http 请求方法命名子目录（如：get、post），支持方法 ```get、post、delete、put``` <br>
+3、项目中不同的请求方法分别放置对应的以请求方法命名的子目录下，目录下新建 ```xxx_xxx_xxx.json``` 文件，书写响应 json 报文，支持以 ```mockJs``` 数据模板定义
+
+### json 文件命名规范
+如果要请求路径为：```/get/user/info => get_user_info.json``` <br>
+如果要请求路径本身存在_：```/get/user/org_info => get_user_org__info.json``` <br>
+注：除 .json 以外的文件都会忽略
+
+## 目录规范示例
+```
+├── mock
+│ ├── get
+│ │ ├── xxx_xxx_xxx.json
+│ │ └── xxx_xxx_xxx.json
+│ ├── post
+│ │ ├── xxx_xxx_xxx.json
+│ │ └── xxx_xxx_xxx.json
+```
 
 ### vue 中使用示例
 ```
