@@ -1,6 +1,6 @@
 {
   "name": "@liuhanfei/mock-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "mock 服务",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,6 @@
   "homepage": "https://github.com/LHF678/mock-service#readme",
   "devDependencies": {
     "@types/node": "^20.11.13",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3"
