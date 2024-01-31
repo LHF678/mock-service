@@ -1,6 +1,6 @@
 {
   "name": "@liuhanfei/mock-service",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mock 服务",
   "main": "dist/index.js",
   "scripts": {

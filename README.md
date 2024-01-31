@@ -6,22 +6,23 @@
 
 ## 安装
 ```
-$ npm install @liuhanfei/mock-server --save-dev
+$ npm install @liuhanfei/mock-service --D
+$ yarn add @liuhanfei/mock-service --D
 ```
 
 ## 使用
 
 ### 方法参数说明
 
-#### start
-> 启动 mock
+#### start 启动 mock 服务
 
 | 参数名 | 说明 | 类型 | 默认值 |
 |-|-|-|-|
 | app | 启动的 express 实例 | express.Application  | - |
 | config | 额外配置 | object  | - |
 
-confg <br>
+##### config
+
 | 参数名 | 说明 | 类型 | 默认值 |
 |-|-|-|-|
 | timeout | 延迟响应时间，必须传入数值或者一个数值范围，范围以 - 分割 例```800-1000``` | number string  | - |
@@ -32,7 +33,7 @@ confg <br>
 ```
 // vue.config.js
 
-const mock = require('@liuhanfei/mock-server');
+const mock = require('@liuhanfei/mock-service');
 
 // 针对 vue-cli&webpack 的不同版本
 module.exports = {
