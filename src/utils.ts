@@ -1,7 +1,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import * as chalk from 'chalk';
-import Mock from 'mockjs';
+import * as Mock from 'mockjs';
 import { METHOD_LIST, NAME_SUFFIX } from './constant';
 
 /**

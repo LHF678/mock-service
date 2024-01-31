@@ -4,7 +4,7 @@ exports.registerInterface = exports.replaceTextByIdentifier = exports.getMethods
 const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
-const mockjs_1 = require("mockjs");
+const Mock = require("mockjs");
 const constant_1 = require("./constant");
 /**
  * @description 获取目标文件夹下的所有请求方式
@@ -81,7 +81,7 @@ const registerInterface = (app, { url = '', method = '', timeout = '', jsonFileP
         }
         // 读取 json 文件
         const json = fs.readJsonSync(jsonFilePath);
-        res.send(mockjs_1.default.mock(json));
+        res.send(Mock.mock(json));
     });
 };
 exports.registerInterface = registerInterface;
