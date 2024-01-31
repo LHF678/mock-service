@@ -1,18 +1,9 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.registerInterface = exports.replaceTextByIdentifier = exports.getMethods = void 0;
-const fs_extra_1 = require("fs-extra");
-const path_1 = require("path");
-const chalk_1 = require("chalk");
+const fs = require("fs-extra");
+const path = require("path");
+const chalk = require("chalk");
 const mockjs_1 = require("mockjs");
 const constant_1 = require("./constant");
 /**
@@ -22,13 +13,13 @@ const constant_1 = require("./constant");
  */
 const getMethods = (targetDir) => {
     // 读取目标路径下所有文件夹名称
-    const dirs = fs_extra_1.default.readdirSync(targetDir);
+    const dirs = fs.readdirSync(targetDir);
     const methods = [];
     for (let i = 0; i < dirs.length; i++) {
         const dir = dirs[i];
-        const dirPath = path_1.default.resolve(targetDir, dir);
+        const dirPath = path.resolve(targetDir, dir);
         // 检索文件或目录的基本
-        const isDirectory = fs_extra_1.default.lstatSync(dirPath).isDirectory();
+        const isDirectory = fs.lstatSync(dirPath).isDirectory();
         const isRequestMethod = constant_1.METHOD_LIST.includes(dir);
         // 过滤-以请求方式命名的文件目录
         if (isDirectory && isRequestMethod) {
@@ -83,14 +74,14 @@ const asyncAwait = (time) => {
  * @return void
  */
 const registerInterface = (app, { url = '', method = '', timeout = '', jsonFilePath = '' } = {}) => {
-    console.log(`mock request: ${chalk_1.default.bgBlue(method)} => ${chalk_1.default.cyan(url)}`);
-    app[method](url, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(`mock request: ${chalk.bgBlue(method)} => ${chalk.cyan(url)}`);
+    app[method](url, async (req, res) => {
         if (timeout) {
-            yield asyncAwait(timeout);
+            await asyncAwait(timeout);
         }
         // 读取 json 文件
-        const json = fs_extra_1.default.readJsonSync(jsonFilePath);
+        const json = fs.readJsonSync(jsonFilePath);
         res.send(mockjs_1.default.mock(json));
-    }));
+    });
 };
 exports.registerInterface = registerInterface;

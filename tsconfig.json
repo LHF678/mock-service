@@ -4,7 +4,7 @@
       "noEmitOnError": true, // 发送错误时不输出任何文件
       "noUnusedLocals": true, // 检查只声明、未使用的局部变量(只提示不报错)
       "noUnusedParameters": false, // 检查未使用的函数参数(只提示不报错)
-      "target": "es2015", // 目标语言版本
+      "target": "es2017", // 目标语言版本
       "module": "commonjs", // 生成代码的模块标准
       "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
       "resolveJsonModule": true, // 是否解析 JSON 模块

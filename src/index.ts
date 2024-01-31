@@ -1,6 +1,6 @@
-import path from 'path';
-import fs from 'fs-extra';
-import chalk from 'chalk';
+import * as fs from 'fs-extra';
+import * as path from 'path';
+import * as chalk from 'chalk';
 import { NAME_SUFFIX } from './constant';
 import { getMethods, replaceTextByIdentifier, registerInterface } from './utils';
 
