@@ -1,4 +1,1 @@
-declare const _default: {
-    start: (app: any, config: any) => void;
-};
-export default _default;
+export declare const start: (app: any, config: any) => void;

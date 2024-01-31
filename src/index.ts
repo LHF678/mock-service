@@ -5,7 +5,7 @@ import { NAME_SUFFIX } from './constant';
 import { getMethods, replaceTextByIdentifier, registerInterface } from './utils';
 
 
-const start = (app, config) => {
+export const start = (app, config) => {
   const { folderName = 'mock', timeout } = config || {};
   // 检测根目录下是 mock 目录是否存在
   const targetDir = path.resolve(process.cwd(), folderName);
@@ -31,6 +31,3 @@ const start = (app, config) => {
   console.log(chalk.green('--------------------------------------------------'));
 };
 
-export default {
-  start
-};

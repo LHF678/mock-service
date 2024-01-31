@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.start = void 0;
 const path_1 = require("path");
 const fs_extra_1 = require("fs-extra");
 const chalk_1 = require("chalk");
@@ -30,6 +31,4 @@ const start = (app, config) => {
     });
     console.log(chalk_1.default.green('--------------------------------------------------'));
 };
-exports.default = {
-    start
-};
+exports.start = start;
