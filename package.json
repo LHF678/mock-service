@@ -1,6 +1,6 @@
 {
   "name": "@liuhanfei/mock-service",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "mock 服务",
   "main": "dist/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "chalk": "^5.3.0",
+    "chalk": "^4.1.2",
     "fs-extra": "^11.2.0",
     "mockjs": "^1.1.0"
   }
