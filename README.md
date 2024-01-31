@@ -6,8 +6,8 @@
 
 ## 安装
 ```
-$ npm install @liuhanfei/mock-service --D
-$ yarn add @liuhanfei/mock-service --D
+$ npm install @liuhanfei/mock-service -D
+$ yarn add @liuhanfei/mock-service -D
 ```
 
 ## 使用
